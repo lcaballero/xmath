@@ -5,8 +5,9 @@ import (
 
 	"math"
 
-	. "github.com/smartystreets/goconvey/convey"
 	"fmt"
+
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 const fuzz = 0.0001
@@ -27,17 +28,17 @@ func TestProb(t *testing.T) {
 	Convey("UpperFourth() cases", t, func() {
 		cases := []struct {
 			size int
-			a int
-			b int
-			err error
+			a    int
+			b    int
+			err  error
 		}{
-			{ 11, 8, 8, nil },
-			{  4, 2, 3, nil },
-			{  3, 2, 2, nil },
-			{  2, 1, 1, nil },
-			{  1, 0, 0, ValueDoesNotExist },
-			{  0, 0, 0, ValueDoesNotExist },
-			{ -1, 0, 0, ValueDoesNotExist },
+			{11, 8, 8, nil},
+			{4, 2, 3, nil},
+			{3, 2, 2, nil},
+			{2, 1, 1, nil},
+			{1, 0, 0, ValueDoesNotExist},
+			{0, 0, 0, ValueDoesNotExist},
+			{-1, 0, 0, ValueDoesNotExist},
 		}
 
 		for _, expected := range cases {
@@ -53,17 +54,17 @@ func TestProb(t *testing.T) {
 	Convey("LowerFourth() cases", t, func() {
 		cases := []struct {
 			size int
-			a int
-			b int
-			err error
+			a    int
+			b    int
+			err  error
 		}{
-			{ 11, 2, 2, nil },
-			{  4, 0, 1, nil },
-			{  3, 0, 0, nil },
-			{  2, 0, 0, nil },
-			{  1, 0, 0, ValueDoesNotExist },
-			{  0, 0, 0, ValueDoesNotExist },
-			{ -1, 0, 0, ValueDoesNotExist },
+			{11, 2, 2, nil},
+			{4, 0, 1, nil},
+			{3, 0, 0, nil},
+			{2, 0, 0, nil},
+			{1, 0, 0, ValueDoesNotExist},
+			{0, 0, 0, ValueDoesNotExist},
+			{-1, 0, 0, ValueDoesNotExist},
 		}
 
 		for _, expected := range cases {
@@ -79,16 +80,16 @@ func TestProb(t *testing.T) {
 	Convey("Middle() cases", t, func() {
 		cases := []struct {
 			size int
-			a int
-			b int
-			err error
+			a    int
+			b    int
+			err  error
 		}{
-			{  4, 1, 2, nil },
-			{  3, 1, 1, nil },
-			{  2, 0, 1, nil },
-			{  1, 0, 0, nil },
-			{  0, 0, 0, ValueDoesNotExist },
-			{ -1, 0, 0, ValueDoesNotExist },
+			{4, 1, 2, nil},
+			{3, 1, 1, nil},
+			{2, 0, 1, nil},
+			{1, 0, 0, nil},
+			{0, 0, 0, ValueDoesNotExist},
+			{-1, 0, 0, ValueDoesNotExist},
 		}
 
 		for _, expected := range cases {

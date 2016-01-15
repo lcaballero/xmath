@@ -6,7 +6,6 @@ import (
 	"sort"
 )
 
-
 var ValueDoesNotExist = errors.New("Value does not exist")
 
 func Sum(nums []float64) float64 {
@@ -108,11 +107,11 @@ func UpperFourth(n int) (int, int, error) {
 	if err != nil {
 		return 0, 0, err
 	}
-	a, b, err := Middle(n-k+1)
+	a, b, err := Middle(n - k + 1)
 	if err != nil {
 		return 0, 0, err
 	}
-	return a+k, b+k, nil
+	return a + k, b + k, nil
 }
 
 // Median sorts nums if isSorted is false, and then returns the middle value.

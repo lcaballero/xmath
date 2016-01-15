@@ -1,7 +1,7 @@
 package main
 
 import (
-	"xmath/nums"
+	"github.com/lcaballero/xmath/nums"
 )
 
 func main() {
